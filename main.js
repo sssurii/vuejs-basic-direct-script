@@ -14,11 +14,11 @@ const app = new Vue({
         }
 
         fetch("https://restcountries.eu/rest/v2/region/europe?fields=name;population")
-        .then(function(response) {
-              return response.json();
-          })
-        .then(data => {
-            this.countries = data
-        }); //here i used arrow function to get parent this reference.
+            .then(function(response) {
+                return response.json();
+            })
+            .then(data => {
+                this.countries = data
+            }); //here i used arrow function to get parent this reference.
     }
 });
