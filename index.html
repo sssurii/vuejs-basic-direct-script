@@ -7,10 +7,18 @@
   <meta name="author" content="@sssurii">
 </head>
 <body>
-    <div>
+    <div id="app">
         <!-- All content goes here -->
-        <h1>This is Vue.js Learning Project</h1>
+        <h1>This is {{project}} Learning Project</h1>
     </div>
   <script src="vue.js"></script>
+  <script type="text/javascript">
+    const app = new Vue({
+        el: '#app',
+        data: {
+            project:'Vue.js'
+        }
+    });
+  </script>
 </body>
 </html>
