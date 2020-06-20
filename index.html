@@ -18,6 +18,10 @@
                 {{item}}
             </li>
         </u>
+        <h2> This list of counteries is fetched from https://restcountries.eu/</h2>
+        <u>
+            <li v-for ="country in countries"> {{country.name}} - {{country.population}}</li>
+        </u>
     </div>
     <script src="vue.js"></script>
     <script type="text/javascript" src="main.js"></script>

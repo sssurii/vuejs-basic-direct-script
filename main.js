@@ -1,7 +1,8 @@
 const app = new Vue({
     el: '#app',
     data: {
-        project: 'Vue.js'
+        project: 'Vue.js',
+        countries: []
     },
     created() {
         this.list = {
@@ -11,5 +12,13 @@ const app = new Vue({
             3: "Hello world",
             4: "First dummy component"
         }
+
+        fetch("https://restcountries.eu/rest/v2/region/europe?fields=name;population")
+        .then(function(response) {
+              return response.json();
+          })
+        .then(data => {
+            this.countries = data
+        }); //here i used arrow function to get parent this reference.
     }
 });
