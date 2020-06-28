@@ -4,6 +4,16 @@ const app = new Vue({
         project: 'Vue.js',
         countries: []
     },
+    computed: {
+        totalPopulation () {
+            return this.countries.reduce((sum, country) => {
+                return sum + country.population
+            }, 0)
+        },
+        totalCountries () {
+            return this.countries.length;
+        }
+    },
     created() {
         this.list = {
             0: "Learn Basic Concept - How Vue.js works",
